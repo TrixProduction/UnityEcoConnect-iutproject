@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajouter une Location - Unity EcoConnect</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/ajouter-location.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">
+        <img src="img/unity-69.svg" alt="" height="40px" style="filter: invert(100%);">        <span>Unity EcoConnect</span>
+      </a>
+      <div class="navbar-links">
+        <a href="location.html">Locations</a>
+        <a href="ajouter-location.html">Ajouter une Location</a>
+        <a href="contact.html">Contact</a>
+        <a href="connexion.html" class="btn-connexion">Connexion</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="ajouter-location">
+    <div class="container">
+      <div class="form-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+        <h1>Ajouter un Véhicule</h1>
+        <p>Contribuez à notre flotte de véhicules écologiques</p>
+      </div>
+
+      <form class="add-vehicule-form" action="/submit-vehicule" method="POST">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="type">Type de véhicule</label>
+            <select id="type" name="type" required>
+              <option value="">Sélectionnez un type</option>
+              <option value="velo">Vélo électrique</option>
+              <option value="trottinette">Trottinette électrique</option>
+              <option value="voiture">Voiture électrique</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="model">Modèle</label>
+            <input type="text" id="model" name="model" placeholder="ex: Unity Bike V1" required>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Localisation</label>
+            <input type="text" id="location" name="location" placeholder="ex: Parking A - Niveau 1" required>
+          </div>
+
+          <div class="form-group">
+            <label for="battery">Numéo de télephone</label>
+            <input type="text" id="phone" name="phone" placeholder="06 06 06 06 06" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" name="description" rows="4" placeholder="Décrivez l'état et les caractéristiques du véhicule..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="photo">Photo du véhicule</label>
+          <input type="file" id="photo" name="photo" accept="image/*" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Ajouter le véhicule</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

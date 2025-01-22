@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion -Unity EcoConnect</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/connexion.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">
+        <img src="img/unity-69.svg" alt="" height="40px" style="filter: invert(100%);">        <span>Unity EcoConnect</span>
+      </a>
+      <div class="navbar-links">
+        <a href="location.html">Locations</a>
+        <a href="ajouter-location.html">Ajouter une Location</a>
+        <a href="contact.html">Contact</a>
+        <a href="connexion.html" class="btn-connexion">Connexion</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="connexion">
+    <div class="connexion-container">
+      <div class="connexion-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <h1>Connexion Salariés</h1>
+        <p>Accédez à votre espace personnel Unity EcoConnect</p>
+      </div>
+
+      <form class="connexion-form" action="/auth" method="POST">
+        <div class="form-group">
+          <label for="email">Email professionnel</label>
+          <input type="email" id="email" name="email" placeholder="nom@entreprise.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required>
+        </div>
+
+        <div class="form-options">
+          <label class="remember-me">
+            <input type="checkbox" name="remember">
+            <span>Se souvenir de moi</span>
+          </label>
+          <a href="/mot-de-passe-oublie" class="forgot-password">Mot de passe oublié?</a>
+        </div>
+
+        <button type="submit" class="btn-submit">Se connecter</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
